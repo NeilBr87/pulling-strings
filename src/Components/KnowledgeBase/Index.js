@@ -23,6 +23,10 @@ export default function KnowledgeBase() {
         setPicker("constituencies")
     }
 
+    function listOfSpokespeople() {
+        setPicker("spokespeople")
+    }
+
     return (
         <div>
 
@@ -54,9 +58,9 @@ export default function KnowledgeBase() {
                     <p>Full list</p>
                 </div>
                 
-                <div onClick={listOfPosts} id="politicalPosts">
+                <div onClick={listOfSpokespeople} id="spokespeople">
                     <FontAwesomeIcon icon={faSitemap} className="fontAwesomeImg" />
-                    <p>Political posts</p>
+                    <p>Spokespeople</p>
                     <p>Full list</p>
                 </div>
 

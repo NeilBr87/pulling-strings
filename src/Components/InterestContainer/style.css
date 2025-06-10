@@ -1,0 +1,9 @@
+#interestOverview {
+    width: 90vw;
+    background-color: #3F88C5;
+    color: white;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 20px;
+    border: 1px inset white;
+}

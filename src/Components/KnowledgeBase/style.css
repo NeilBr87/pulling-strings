@@ -30,6 +30,14 @@
         margin-top: 5vh;
 }
 
+#spokespeople {
+    background-color: #6DD3CE;
+            border-radius: 4px;
+    width: 32vw;
+    border: 1px inset black;
+        margin-top: 5vh;
+}
+
 .fontAwesomeImg {
     font-size: 24px;
     padding-top: 10px;
