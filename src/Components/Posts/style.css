@@ -1,0 +1,30 @@
+#listOfPosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#memberCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#card {
+    background-color: #CB0036;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#oppCard {
+    background-color: #0072b9;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+}
