@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Donations from '../Donations/Index.js'
+import Payments from '../PaymentsUK/index.js'
 import './style.css'
 export default function InterestContainer() {
 
@@ -18,6 +19,14 @@ export default function InterestContainer() {
         }
     }
 
+    function openPayments() {
+        if (interestPicker !== "Payments") {
+            setInterestPicker("Payments")
+        } else {
+            setInterestPicker("")
+        }
+    }
+
     return (
         <div>
             <button id="interestOverview" onClick={expand}>Who's Paying Who?</button>
@@ -29,8 +38,8 @@ export default function InterestContainer() {
                 <button>Employment</button> */}
                 <button className="interestButtons" onClick={openDonations}>Donations</button>
                 {interestPicker === "Donations" && <Donations />}
-                <button className="interestButtons" >Gifts, Benefits and hospitality - UK</button>
-                <button className="interestButtons" >Gifts, Benefits and hospitality - Outside of UK</button>
+                <button className="interestButtons" onClick={openPayments}>Gifts, Benefits and hospitality - UK</button>
+                {interestPicker === "Payments" && <Payments />}
             </div>}
 
             

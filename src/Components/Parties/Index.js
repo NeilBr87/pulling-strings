@@ -41,9 +41,9 @@ export default function Parties(props) {
       {parties.length === 0 ? (
         <p>No party data available.</p>
       ) : (
-        <ul>
+        <div>
           {parties.map(party => (
-            <li
+            <div
               key={party.id}
               style={{
                 backgroundColor: party.backgroundColour
@@ -61,9 +61,9 @@ export default function Parties(props) {
               Lords Main Party: {party.isLordsMainParty ? 'Yes' : 'No'}<br />
               Lords Spiritual: {party.isLordsSpiritualParty ? 'Yes' : 'No'}<br />
               Independent: {party.isIndependentParty ? 'Yes' : 'No'}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );

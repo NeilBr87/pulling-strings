@@ -6,9 +6,13 @@ import InterestContainer from '../InterestContainer/Index.js'
 export default function Navigation() {
 
    const [knowledgeBase, setKnowledgeBase] = useState(false)
-
+    const [contact, setContact] = useState(false)
    function openKB() {
     setKnowledgeBase(true)
+   }
+
+   function openContact() {
+    setContact(!contact)
    }
 
     return (
@@ -24,11 +28,12 @@ export default function Navigation() {
                 <div id="pageImage"><p>"Money in politics is like water running downhill -- it finds its way."</p><p>- Jonathan Alter</p></div>
                 <h2>Menu</h2>
                 <InterestContainer />
-                <button id="kbButton" onClick={openKB}>Knowledge Base</button>            
+                <button id="kbButton" onClick={openKB}>Knowledge Base</button>
+                <button id="contactButton" onClick={openContact}>Contact</button>      
             </div>}
 
             {knowledgeBase && <KnowledgeBase knowledgeBase={knowledgeBase} setKnowledgeBase={setKnowledgeBase} />}
-
+            {contact && <div style={{marginTop: '4vh'}}>Feel free to get in contact with me via my <a style={{  textDecoration: 'none', fontWeight: 'bold'}} href="https://neil-brooks-portfolio.netlify.app/portfoliopage">Portfolio</a></div>}
 
         </div>
     )

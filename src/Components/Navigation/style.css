@@ -26,3 +26,13 @@
     padding-top: 10vh;
     padding-bottom: 3vh;
 }
+
+#contactButton {
+    background-color: #419D78;
+        width: 90vw;
+    color: white;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 20px;
+    border: 1px inset white;
+}
