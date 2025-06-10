@@ -7,7 +7,7 @@ import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import { faSitemap } from '@fortawesome/free-solid-svg-icons';
 
 import './style.css'
-export default function KnowledgeBase() {
+export default function KnowledgeBase(props) {
 
     const [picker, setPicker] = useState("");
 
@@ -27,10 +27,18 @@ export default function KnowledgeBase() {
         setPicker("spokespeople")
     }
 
+    function kbBack() {
+        props.setKnowledgeBase(false);
+    }
+
+    function constBack() {
+        setPicker("")
+    }
+
     return (
         <div>
 
-            {picker === "" | picker === "spokespeople" && <div>
+            {picker === "" && <div>
 
                 <h2>Knowledge Base</h2>
 
@@ -66,15 +74,15 @@ export default function KnowledgeBase() {
 
 
                 </div>
+                                <button onClick={kbBack} className="backButton">Back</button>
 
             </div>}
 
-            {picker === "parties" && <Parties />} 
-            {picker === "posts" && <Posts />} 
-            {picker === "constituencies" && <Constituencies />}
-            {picker === "spokespeople" && <div style={{color: 'red', marginTop: '3vh'}}>Under construction!</div>}
+            {picker === "parties" && <Parties picker={picker} setPicker={setPicker} />} 
+            {picker === "posts" && <Posts picker={picker} setPicker={setPicker}/>} 
+            {picker === "constituencies" && <Constituencies picker={picker} setPicker={setPicker}/>}
+            {picker === "spokespeople" && <div><h4 style={{marginTop: '10vh', color: 'red'}}>Under construction!</h4> <button className="backButton" onClick={constBack}>Back</button> </div>}
 
-            <button>Back</button>
             
             
         </div>

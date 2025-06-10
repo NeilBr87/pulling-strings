@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 
-const FetchGovernmentPosts = () => {
+const FetchGovernmentPosts = (props) => {
   const [governmentPosts, setGovernmentPosts] = useState([]);
   const [oppositionPosts, setOppositionPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  function backToKB() {
+    props.setPicker("");
+  }
 
   useEffect(() => {
     fetch('https://members-api.parliament.uk/api/Posts/GovernmentPosts', {
@@ -95,6 +99,7 @@ const FetchGovernmentPosts = () => {
   return (
     <div id="listOfPosts">
       <h3>Government Posts</h3>
+      <button onClick={backToKB} style={{marginBottom: '4vh'}} className="backButton">Back</button>
       {governmentPosts.length === 0 ? (
         <p>No government posts found.</p>
       ) : (

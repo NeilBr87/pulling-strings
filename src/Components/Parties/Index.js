@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 
-const FetchParties = () => {
+export default function Parties(props) {
   const [parties, setParties] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  function backToKB() {
+    props.setPicker("");
+  }
 
   useEffect(() => {
     fetch('https://members-api.parliament.uk/api/Parties/GetActive/1', {
@@ -32,6 +36,8 @@ const FetchParties = () => {
   return (
     <div>
       <h2>Active UK Parties</h2>
+            <button onClick={backToKB} style={{marginBottom: '4vh'}} className="backButton">Back</button>
+
       {parties.length === 0 ? (
         <p>No party data available.</p>
       ) : (
@@ -62,5 +68,3 @@ const FetchParties = () => {
     </div>
   );
 };
-
-export default FetchParties;

@@ -27,7 +27,7 @@ export default function Navigation() {
                 <button id="kbButton" onClick={openKB}>Knowledge Base</button>            
             </div>}
 
-            {knowledgeBase && <KnowledgeBase />}
+            {knowledgeBase && <KnowledgeBase knowledgeBase={knowledgeBase} setKnowledgeBase={setKnowledgeBase} />}
 
 
         </div>

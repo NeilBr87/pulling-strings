@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-const FetchConstituencies = () => {
+export default function Constituencies(props) {
+
   const [constituencies, setConstituencies] = useState([]);
   const [loading, setLoading] = useState(true);
+
+    function backToKB() {
+    props.setPicker("");
+  }
 
   const fetchAllConstituencies = async () => {
     const batchSize = 50;
@@ -42,6 +47,8 @@ const FetchConstituencies = () => {
   return (
     <div>
       <h2>UK Parliamentary Constituencies</h2>
+      <button onClick={backToKB} style={{marginBottom: '4vh'}} className="backButton">Back</button>
+
       {constituencies.length === 0 ? (
         <p>No constituencies found.</p>
       ) : (
@@ -86,4 +93,3 @@ const FetchConstituencies = () => {
   );
 };
 
-export default FetchConstituencies;
