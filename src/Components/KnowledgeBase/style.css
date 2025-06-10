@@ -1,0 +1,36 @@
+.kbRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+}
+
+#politicalParties {
+    border-radius: 4px;
+    background-color: #A2D729;
+    width: 32vw;
+    border: 1px inset black;
+    margin-top: 5vh;
+}
+
+#politicalPosts {
+    border-radius: 4px;
+    background-color: #F0A202;
+    width: 32vw;
+    border: 1px inset black;
+        margin-top: 5vh;
+}
+
+#constituencies {
+    background-color: #D95D39;
+        border-radius: 4px;
+    width: 32vw;
+    border: 1px inset black;
+        margin-top: 5vh;
+}
+
+.fontAwesomeImg {
+    font-size: 24px;
+    padding-top: 10px;
+}

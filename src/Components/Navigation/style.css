@@ -1,0 +1,16 @@
+#kbButton {
+    width: 90vw;
+    background-color: #CB0036;
+    color: white;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 20px;
+    border: 1px inset white;
+} 
+
+#navPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

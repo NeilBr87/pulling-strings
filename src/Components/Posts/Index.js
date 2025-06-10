@@ -66,7 +66,7 @@ const FetchGovernmentPosts = () => {
           border: '2px solid white',
           borderRadius: '10px',
           padding: '1vh',
-          backgroundColor, // Apply dynamic background color
+          backgroundColor,
           color: 'white',
           gap: '-10px'
         }}

@@ -1,35 +1,29 @@
 import { useState } from 'react';
-import Parties from '../Parties/Index.js'
-import Posts from '../Posts/Index.js'
+import './style.css'
+import logo from './logo.png'
+import KnowledgeBase from '../KnowledgeBase/Index.js'
 export default function Navigation() {
 
-    const [picker, setPicker] = useState("");
+   const [knowledgeBase, setKnowledgeBase] = useState(false)
 
-    function listOfParties() {
-        setPicker("parties")
-    }
-
-    function listOfPosts() {
-        setPicker("posts")
-    }
+   function openKB() {
+    setKnowledgeBase(true)
+   }
 
     return (
         <div>
 
-            {picker === "" && <div>
-
-                <button onClick={listOfParties}>List of parties</button>
-                <button onClick={listOfPosts}>List of posts</button>
-
+            {!knowledgeBase && 
+            <div id="navPage">
+                <img src={logo} alt="logo" style={{width: '50vw', height: '20vh'}} />
+                <h1>Who's Pulling the Strings?</h1>
+                <h4>A comprehensive tracker of special interests of Members of Parliament.</h4>
+                <button id="kbButton" onClick={openKB}>Knowledge Base</button>            
             </div>}
 
-            {picker === "parties" && <Parties />} 
-            {picker === "posts" && <Posts />} 
-            
-            
+            {knowledgeBase && <KnowledgeBase />}
 
-            
-            
+
         </div>
     )
 }
