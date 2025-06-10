@@ -14,3 +14,15 @@
     justify-content: center;
     align-items: center;
 }
+
+#pageImage {
+    background: url("https://assets-learning.parliament.uk/uploads/2020/05/HOC-Chamber-scaled.jpg");
+    background-size: cover;
+    width: 100%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    color: white;
+    font-weight: bold;
+    padding-top: 10vh;
+    padding-bottom: 3vh;
+}

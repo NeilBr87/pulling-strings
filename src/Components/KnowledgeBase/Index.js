@@ -30,7 +30,7 @@ export default function KnowledgeBase() {
     return (
         <div>
 
-            {picker === "" && <div>
+            {picker === "" | picker === "spokespeople" && <div>
 
                 <h2>Knowledge Base</h2>
 
@@ -64,6 +64,7 @@ export default function KnowledgeBase() {
                     <p>Full list</p>
                 </div>
 
+
                 </div>
 
             </div>}
@@ -71,8 +72,9 @@ export default function KnowledgeBase() {
             {picker === "parties" && <Parties />} 
             {picker === "posts" && <Posts />} 
             {picker === "constituencies" && <Constituencies />}
-            
+            {picker === "spokespeople" && <div style={{color: 'red', marginTop: '3vh'}}>Under construction!</div>}
 
+            <button>Back</button>
             
             
         </div>

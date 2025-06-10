@@ -7,3 +7,21 @@
     font-size: 20px;
     border: 1px inset white;
 }
+
+#interestCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+.interestButtons {
+    width: 80vw;
+    height: 4vh;
+    background-color: #c99106;
+    color: white;
+    border: none;
+    margin-bottom: 2px;
+    border-radius: 4px;
+}
