@@ -22,7 +22,18 @@ The loan was repaid in full on Monday 3 February 2025</p>
             <p>Description: Pro bono legal advice</p>
             </div>
 
-
+            <div className="infoContainer">
+            <h4>Gits received per party leader</h4>
+            <p>Keir Starmer (Labour): £67,747.80</p>
+            <p>Kemi Badenoch (Conservative): £14,350.38</p>
+            <p>Carla Denyer & Adrian Ramsay (Greens): £7,436.43</p>
+            <p>Ed Davey (Liberal Democrats): £1,382</p>
+            <p>Nigel Farage (Reform): £11,333.20 </p>
+            <p>John Swinney (Scottish National Party): £0 </p>
+            <p>Rhun ap Iorwerth (Plaid Cymru): £0 </p>
+            <p>Mary Lou McDonald (Sinn Fein): £0</p>
+            <p>Gavin Robinson (Democratic Unionist Party): £0</p>
+            </div>
 
         </div>
     )
