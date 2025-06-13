@@ -8,6 +8,16 @@
     border: 1px inset white;
 } 
 
+#voteButton {
+    width: 90vw;
+    background-color: #DF941D;
+    color: white;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 20px;
+    border: 1px inset white;
+}
+
 #navPage {
     display: flex;
     flex-direction: column;

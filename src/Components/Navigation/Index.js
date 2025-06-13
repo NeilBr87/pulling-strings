@@ -28,12 +28,14 @@ export default function Navigation() {
                 <div id="pageImage"><p>"Money in politics is like water running downhill -- it finds its way."</p><p>- Jonathan Alter</p></div>
                 <h2>Menu</h2>
                 <InterestContainer />
+                <button id="voteButton">Commons vote tracker</button>
                 <button id="kbButton" onClick={openKB}>Knowledge Base</button>
-                <button id="contactButton" onClick={openContact}>Contact</button>      
+                <button id="contactButton" onClick={openContact}>Contact</button>
+                {contact && <div style={{marginTop: '4vh'}}>Feel free to get in contact with me via my <a style={{  textDecoration: 'none', fontWeight: 'bold'}} href="https://neil-brooks-portfolio.netlify.app/portfoliopage">Portfolio</a></div>}
+
             </div>}
 
             {knowledgeBase && <KnowledgeBase knowledgeBase={knowledgeBase} setKnowledgeBase={setKnowledgeBase} />}
-            {contact && <div style={{marginTop: '4vh'}}>Feel free to get in contact with me via my <a style={{  textDecoration: 'none', fontWeight: 'bold'}} href="https://neil-brooks-portfolio.netlify.app/portfoliopage">Portfolio</a></div>}
 
         </div>
     )

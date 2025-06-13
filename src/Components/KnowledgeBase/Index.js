@@ -3,6 +3,7 @@ import Parties from '../Parties/Index.js'
 import Posts from '../Posts/Index.js'
 import Constituencies from '../Constituencies/Index.js'
 import Departments from '../Departments/Index.js'
+import Votes from '../Votes/Index.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import { faSitemap } from '@fortawesome/free-solid-svg-icons';
@@ -24,13 +25,12 @@ export default function KnowledgeBase(props) {
         setPicker("constituencies")
     }
 
-    function listOfSpokespeople() {
-        setPicker("spokespeople")
-    }
+
 
     function listOfDepts() {
         setPicker("departments")
     }
+
     function kbBack() {
         props.setKnowledgeBase(false);
     }
@@ -71,33 +71,16 @@ export default function KnowledgeBase(props) {
                     <p>Full list</p>
                 </div>
                 
-                <div onClick={listOfSpokespeople} id="spokespeople">
-                    <FontAwesomeIcon icon={faSitemap} className="fontAwesomeImg" />
-                    <p>Spokespeople</p>
-                    <p>Full list</p>
-                </div>
-
-
-                </div>
-
-                
-                <div className="kbRow">
-
                 <div onClick={listOfDepts} id="constituencies">
                     <FontAwesomeIcon icon={faPeopleGroup} className="fontAwesomeImg" />
                     <p>Departments</p>
                     <p>Full list</p>
                 </div>
-{/*                 
-                <div onClick={listOfSpokespeople} id="spokespeople">
-                    <FontAwesomeIcon icon={faSitemap} className="fontAwesomeImg" />
-                    <p>Spokespeople</p>
-                    <p>Full list</p>
-                </div> */}
 
 
                 </div>
 
+    
                 
 
                 
@@ -110,6 +93,7 @@ export default function KnowledgeBase(props) {
             {picker === "constituencies" && <Constituencies picker={picker} setPicker={setPicker}/>}
             {picker === "spokespeople" && <div><h4 style={{marginTop: '10vh', color: 'red'}}>Under construction!</h4> <button className="backButton" onClick={constBack}>Back</button> </div>}
             {picker === "departments" && <Departments picker={picker} setPicker={setPicker}/>}
+            {picker === "votes" && <Votes picker={picker} setPicker={setPicker}/>}
 
             
             
