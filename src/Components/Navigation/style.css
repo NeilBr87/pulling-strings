@@ -18,6 +18,16 @@
     border: 1px inset white;
 }
 
+#lordsButton {
+    width: 90vw;
+    background-color: #B79FAD;
+    color: white;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 20px;
+    border: 1px inset white;
+}
+
 #navPage {
     display: flex;
     flex-direction: column;
